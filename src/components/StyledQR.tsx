@@ -12,7 +12,7 @@ interface StyledQRProps {
 
 export default function StyledQR({ value, logo, fgColor, bgColor }: StyledQRProps) {
   const qrRef = useRef<HTMLDivElement>(null);
-  const qrCode = useRef<QRCodeStyling>();
+  const qrCode = useRef<QRCodeStyling | null>(null);
 
   // Init QR
   useEffect(() => {
